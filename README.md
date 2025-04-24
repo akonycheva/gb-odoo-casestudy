@@ -1,4 +1,4 @@
-# GymBem Custom Module for Odoo 16
+# GymBeam Custom Module for Odoo 16
 
 ## Overview
 
