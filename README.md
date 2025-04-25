@@ -59,22 +59,22 @@ This section describes how to configure Gmail as the outgoing email server in Od
 To enable the "Send emails" button (which sends emails based on the Excel file uploaded in the `employee_contacts` field), you need to configure Gmail as the outgoing email server in Odoo. Follow these steps:
 
 1. **Prepare Gmail Account**:
-   - Ensure your Gmail account has 2-Step Verification enabled (Google Account > Security > 2-Step Verification).
-   - Generate an App Password for Odoo:
-     - Go to App Passwords in Google Account.
-     - Generate the password and copy it.
+   1.1 Ensure your Gmail account has 2-Step Verification enabled (Google Account > Security > 2-Step Verification).
+   1.2 Generate an App Password for Odoo:
+     1.2.1 Go to App Passwords in Google Account.
+     1.2.2 Generate the password and copy it.
 
 2. **Configure Outgoing Email Server in Odoo**:
    - Log in to Odoo as an administrator.
    - Go to "Settings" > "General Settings".
    - In the "Emails" section, find "Outgoing Email Servers" and click "Create".
    - Fill in the details:
-     - **Name**: `Gmail SMTP`
-     - **SMTP Server**: `smtp.gmail.com`
-     - **SMTP Port**: `587`
-     - **Connection Encryption**: `TLS (STARTTLS)`
-     - **Username**: Your Gmail address (e.g., `your.email@gmail.com`)
-     - **Password**: The App Password generated earlier (e.g., `abcd efgh ijkl mnop`)
+      **Name**: `Gmail SMTP`
+      **SMTP Server**: `smtp.gmail.com`
+      **SMTP Port**: `587`
+      **Connection Encryption**: `TLS (STARTTLS)`
+      **Username**: Your Gmail address (e.g., `your.email@gmail.com`)
+      **Password**: The App Password generated earlier (e.g., `abcd efgh ijkl mnop`)
    - Save the settings and click "Test Connection". You should see a "Connection Test Successful" message.
 
 3. **Test Email Sending**:
