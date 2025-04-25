@@ -69,12 +69,12 @@ To enable the "Send emails" button (which sends emails based on the Excel file u
    - Go to "Settings" > "General Settings".
    - In the "Emails" section, find "Outgoing Email Servers" and click "Create".
    - Fill in the details:
-      **Name**: `Gmail SMTP`
-      **SMTP Server**: `smtp.gmail.com`
-      **SMTP Port**: `587`
-      **Connection Encryption**: `TLS (STARTTLS)`
-      **Username**: Your Gmail address (e.g., `your.email@gmail.com`)
-      **Password**: The App Password generated earlier (e.g., `abcd efgh ijkl mnop`)
+      - **Name**: `Gmail SMTP`
+      - **SMTP Server**: `smtp.gmail.com`
+      - **SMTP Port**: `587`
+      - **Connection Encryption**: `TLS (STARTTLS)`
+      - **Username**: Your Gmail address (e.g., `your.email@gmail.com`)
+      - **Password**: The App Password generated earlier (e.g., `abcd efgh ijkl mnop`)
    - Save the settings and click "Test Connection". You should see a "Connection Test Successful" message.
 
 3. **Test Email Sending**:
