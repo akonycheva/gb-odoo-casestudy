@@ -8,6 +8,8 @@
             <!-- 1.1 -->
             <field name="work_email" position="after">
                 <field name="i_love_gb"/>
+                <!-- 1.4 (a)-->
+                <field name="employee_contacts" attrs="{'invisible': [('i_love_gb', '=', False)]}"/>
             </field>
             <!-- 1.2 -->
             <field name="address_home_id" position="after">
@@ -19,6 +21,10 @@
             <field name="phone" position="replace">
                 <field name="special_phone"/>
             </field>
+            <!-- 1.4 (d) -->
+            <xpath expr="//header" position="inside">
+                <button name="%(action_send_emails_wizard)d" string="Send emails" type="action" class="btn-primary"/>
+            </xpath>
 
         </field>
     </record>

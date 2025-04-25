@@ -11,6 +11,8 @@ class HrEmployee(models.Model):
 
     special_phone = fields.Char(string='Special Phone')
 
+    employee_contacts = fields.Binary(string='Employee Contacts')
+
     @api.depends('salary', 'tax')
     def _compute_total_salary(self):
          self.total_salary = self.salary + self.tax
