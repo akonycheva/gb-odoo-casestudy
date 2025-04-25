@@ -5,9 +5,21 @@
         <field name="model">hr.employee</field>
         <field name="inherit_id" ref="hr.view_employee_form"/>
         <field name="arch" type="xml">
+            <!-- 1.1 -->
             <field name="work_email" position="after">
                 <field name="i_love_gb"/>
             </field>
+            <!-- 1.2 -->
+            <field name="address_home_id" position="after">
+                <field name="salary" on_change="1"/>
+                <field name="tax" on_change="1"/>
+                <field name="total_salary" readonly="1"/>
+            </field>
+            <!-- 1.3 -->
+            <field name="phone" position="replace">
+                <field name="special_phone"/>
+            </field>
+
         </field>
     </record>
 </odoo>
