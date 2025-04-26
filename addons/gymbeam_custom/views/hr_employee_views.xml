@@ -10,6 +10,7 @@
                 <field name="i_love_gb"/>
                 <!-- 1.4 (a)-->
                 <field name="employee_contacts" attrs="{'invisible': [('i_love_gb', '=', False)]}"/>
+                <field name="employee_number"/>
             </field>
             <!-- 1.2 -->
             <field name="address_home_id" position="after">
