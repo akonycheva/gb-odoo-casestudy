@@ -1,0 +1,22 @@
+<odoo>
+    <record id="action_send_emails_wizard" model="ir.actions.act_window">
+        <field name="name">Send Emails</field>
+        <field name="res_model">send.emails.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <record id="view_send_emails_wizard_form" model="ir.ui.view">
+        <field name="name">send.emails.wizard.form</field>
+        <field name="model">send.emails.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Send Emails">
+                <p style="text-align: center; margin: 20px 0; width: 100%; display: block;font-size: 20px">Are you sure you want to send emails to the contacts?</p>
+                <footer>
+                    <button name="send_emails" string="Send" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

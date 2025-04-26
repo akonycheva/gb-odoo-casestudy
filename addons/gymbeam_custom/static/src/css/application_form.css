@@ -1,0 +1,83 @@
+/* Стили для полей ввода */
+.s_website_form_input {
+    border: 1px solid #ccc; /* Серая рамка по умолчанию */
+    padding: 8px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.submit-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* если хочешь, чтобы текст ошибки был по центру под кнопкой */
+}
+
+
+/* Красная рамка при ошибке */
+.s_website_form_input.is-invalid {
+    border: 2px solid #ff0000; /* Красная рамка */
+}
+
+/* Стили для сообщений об ошибках под полями */
+.error {
+    color: #ff0000; /* Красный цвет */
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Стили для общего сообщения об ошибке */
+.error.general-error {
+    color: #ff0000; /* Красный цвет */
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+    text-align: center; /* Центрируем */
+}
+
+/* Стили для кнопки */
+.btn-primary {
+    background-color: #f5a623; /* Оранжевый фон */
+    color: white; /* Белый текст */
+    padding: 10px 40px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 180px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block; /* Кнопка не растягивается на всю ширину */
+}
+
+/* Центрируем контейнер кнопки */
+div[data-name="Submit Button"] {
+    text-align: center; /* Центрируем содержимое */
+    margin-top: 20px; /* Добавляем отступ сверху */
+}
+
+/* Стили для textarea */
+textarea.s_website_form_input {
+    height: 100px; /* Высота для поля Short Introduction */
+    resize: vertical; /* Разрешаем менять только высоту */
+}
+
+/* Стили для поля загрузки файла */
+.custom-file-label {
+    border: 1px solid #ccc; /* Серая рамка */
+    padding: 8px;
+    border-radius: 4px;
+    color: #666; /* Серый текст для "No file chosen" */
+    background-color: #fff;
+}
+
+/* Красная рамка для поля загрузки при ошибке */
+.custom-file-input.is-invalid ~ .custom-file-label {
+    border: 2px solid #ff0000; /* Красная рамка */
+}
+
+/* Стили для заголовка */
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
