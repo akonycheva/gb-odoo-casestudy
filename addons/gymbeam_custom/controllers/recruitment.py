@@ -5,12 +5,11 @@ from odoo.addons.website.controllers.form import WebsiteForm
 class CustomWebsiteForm(WebsiteForm):
     @http.route('/website/form/', type='http', auth="public", website=True, methods=['POST'])
     def website_form(self, model, **kwargs):
-        # Получаем данные формы
+
         post = kwargs.copy()
         error = {}
         has_errors = False
 
-        # Проверяем обязательные поля
         if not post.get('partner_name'):
             error['partner_name'] = 'This is a required field'
             has_errors = True
@@ -24,7 +23,6 @@ class CustomWebsiteForm(WebsiteForm):
             error['attachment'] = 'This is a required field'
             has_errors = True
 
-        # Если есть ошибки, возвращаем форму с ошибками
         if has_errors:
             job_id = post.get('job_id')
             job = request.env['hr.job'].sudo().browse(int(job_id)) if job_id else None
@@ -39,7 +37,6 @@ class CustomWebsiteForm(WebsiteForm):
                 'action': f'/website/form/{model}',  # Обновляем action
             })
 
-        # Если ошибок нет, продолжаем стандартную обработку
         return super(CustomWebsiteForm, self).website_form(model, **kwargs)
 
     @http.route('/jobs/apply/<string:job_slug>', type='http', auth="public", website=True, methods=['GET'])
@@ -57,5 +54,5 @@ class CustomWebsiteForm(WebsiteForm):
             'error': {},
             'has_errors': False,
             'post': post if post else {},
-            'action': '/website/form/hr_applicant',  # Указываем правильный action
+            'action': '/website/form/hr_applicant',
         })

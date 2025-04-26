@@ -1,11 +1,13 @@
 from odoo import http
 from odoo.http import request
+import json
 
 class ApplicantController(http.Controller):
 
     @http.route('/case_study/applicant/get', type='json', auth='public', methods=['POST'], csrf=False)
     def create_applicant(self):
-        data = request.jsonrequest
+        raw_data = request.httprequest.get_data()
+        data = json.loads(raw_data)
         candidates = data.get('candidates', [])
         for candidate in candidates:
             firstname = candidate.get('firstname')
